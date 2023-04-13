@@ -1,0 +1,17 @@
+﻿@model PcVadisi.Models.entity.kotegori
+@{
+    ViewBag.Title = "yenikategori";
+    Layout = "~/Views/Shared/_mainlyout.cshtml";
+}
+
+<form class=" form-group" method="post">
+    <div>
+        <label>Kategori Adı</label>
+        <input type="text" required class="form-control" name="kategoriad" />
+    </div>
+    <div style="margin-top: 10px">
+        <a href="/kategori/Index" class="btn btn-danger">İptal</a>
+        <button class=" btn btn-info"> Kategori Ekle</button>
+    </div>
+</form>
+

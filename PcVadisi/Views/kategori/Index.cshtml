@@ -1,0 +1,32 @@
+﻿@using PcVadisi.Models.entity
+@model List <kotegori>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_mainlyout.cshtml";
+}
+
+
+<table class=" table table-bordered">
+    <tr>
+        <th> kategori id</th>
+        <th> kategori adı</th>
+        <th>EKLE/GÜNCELLE</th>
+        
+    </tr>
+    <tbody>
+        @foreach(var ktgr in Model)
+            {
+        <tr>
+            <th>@ktgr.kotegoriid</th>
+            <td>@ktgr.kategoriad</td>
+            <td>    
+                <a href="/kategori/DeleteKategori/@ktgr.kotegoriid" class=" btn btn-danger">SİL</a>
+                <a href="/kategori/KategoriGetir/@ktgr.kotegoriid" class=" btn btn-success">GÜNCELLE</a>
+            </td>
+        </tr>
+            }
+    </tbody>
+</table>
+<a href="/kategori/yenikategori/" class="btn btn-primary "> YENİ KATEGORİ EKLE</a>
+
+ 

@@ -1,0 +1,23 @@
+﻿@model PcVadisi.Models.entity.musteri
+@{
+    ViewBag.Title = "yenimusteri";
+    Layout = "~/Views/Shared/_mainlyout.cshtml";
+}
+
+<form class=" form-group" method="post">
+    <div>
+        <label>Müşteri Adı</label>
+        <input type="text" required class="form-control" name="musteriad" />
+    </div>
+    <br />
+    <div>
+        <a href="~/Views/musteri/yenimusteri.cshtml"></a>
+        <label>Müşteri Soyadı</label>
+        <input type="text" required class="form-control" name="musterisoyad" />
+    </div>
+    <div style="margin-top: 10px">
+        <a href="/musteri/Index" class="btn btn-danger">İptal</a>
+        <button class=" btn btn-info"> Müşteri Ekle</button>
+    </div>
+</form>
+

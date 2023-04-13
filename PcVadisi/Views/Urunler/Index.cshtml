@@ -1,0 +1,49 @@
+﻿@using PcVadisi.Models.entity
+@model List<urunler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_mainlyout.cshtml";
+}
+
+
+
+
+
+<table class=" table table-bordered">
+    <tr>
+        <th> Ürün id</th>
+        <th> Ürün adı</th>
+        <th> Kategori</th>
+        <th>Marka</th>
+        <th> Ürün Fiyatı</th>
+        <th> Stok</th>
+        <th>EKLE/GÜNCELLE</th>
+
+    </tr>
+    <tbody>
+        @foreach (var urn in Model)
+        {
+            <tr>
+                <th>@urn.urunid</th>
+                <td>@urn.urunad</td>
+                <td>@urn.kotegori.kategoriad</td>
+                <td>@urn.marka</td>
+                <td>@urn.fiyat</td>
+                <td>@urn.stok</td>
+                <td>
+                    <a href="/Urunler/DeleteUrun/@urn.urunid" class=" btn btn-danger">SİL</a>
+                    <a href="/Urunler/urunGetir/@urn.urunid" class=" btn btn-success">GÜNCELLE</a>
+                </td>
+
+
+
+
+            </tr>
+
+        }
+    </tbody>
+</table>
+
+
+<a href="/urunler/yeniurunler/" class="btn btn-primary "> YENİ ÜRÜN EKLE</a>
+

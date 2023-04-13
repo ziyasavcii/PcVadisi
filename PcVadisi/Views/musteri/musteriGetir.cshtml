@@ -1,0 +1,31 @@
+﻿@model PcVadisi.Models.entity.musteri
+@{
+    ViewBag.Title = "musteriGetir";
+    Layout = "~/Views/Shared/_mainlyout.cshtml";
+}
+
+@using (Html.BeginForm("guncelle", "musteri", FormMethod.Post))
+{
+
+    <div class=" form-group">
+        @Html.LabelFor(m => m.musteriid)
+        @Html.TextBoxFor(m => m.musteriid, new { @class = "form-control" })
+       
+             
+        <br />
+
+        @Html.LabelFor(m=>m.musteriad)
+        @Html.TextBoxFor(m=>m.musteriad , new { @class ="form-control"})
+
+        <br />
+
+        @Html.LabelFor(m=>m.musterisoyad)
+        @Html.TextBoxFor(m=>m.musterisoyad, new { @class ="form-control"})
+
+
+    </div>
+
+    <button class="btn btn-success">Düzenle</button>
+
+}
+

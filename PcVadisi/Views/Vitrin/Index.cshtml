@@ -1,0 +1,52 @@
+﻿@using PcVadisi.Models.entity
+@model List<urunler>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_VitrinLayout.cshtml";
+}
+
+
+<div class="row">
+
+    <h2>Ürünler Listesi</h2>
+    <hr />
+    <br />
+
+    @foreach (var i in Model)
+    {
+
+        <div class="col-md-4">
+
+            <div class="card " style=" border:solid 1px #ccc; padding:10px">
+
+                <div class="card-body">
+                    <h2 class="card-title">@i.urunad</h2>
+                    <h5 class="card-title">@i.marka - @i.fiyat ₺</h5>
+                    <hr />
+                    <p class="card-text" style="text-align:justify">
+                       <b> @i.marka</b> markalı <b>@i.kotegori.kategoriad </b>  ürünü<b> @i.urunad </b> <b>@i.stok</b> adet stoğu bulunmaktadır. Size özel <b>@i.fiyat </b> ₺ ile.
+                    </p>
+                    <a href="#" class="btn btn-primary">Satın Al</a>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    }
+
+
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+
+
+
